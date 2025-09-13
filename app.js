@@ -6,8 +6,10 @@ const express = require("express");
 const { default: mongoose } = require("mongoose");
 const cors = require("cors");
 
-const DB_PATH =
-  "mongodb+srv://root:root@pawanlearning.hlcvopr.mongodb.net/todo?retryWrites=true&w=majority&appName=PawanLearning";
+// const DB_PATH =
+//   "mongodb+srv://root:root@pawanlearning.hlcvopr.mongodb.net/todo?retryWrites=true&w=majority&appName=PawanLearning";
+
+const DB_PATH = process.env.MONGODB_URL;
 
 //local module
 const todoItemsRouter = require("./routes/todoItemsRouter");
@@ -22,7 +24,8 @@ app.use("/api/todo", todoItemsRouter);
 
 app.use(errorsController.pageNotFound);
 
-const PORT = 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 mongoose
   .connect(DB_PATH)
