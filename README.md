@@ -9,7 +9,7 @@ git
 
 ## 🌐 Live Demo
 
-- **Frontend (Netlify):** [To-Do App Live]((https://todo-app-1997.netlify.app/)
+- **Frontend (Netlify):** [To-Do App Live](https://todo-app-1997.netlify.app/)
 
 ---
 
